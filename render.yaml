@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: shopeasy-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://mysql-25bdb490-karthisiva30556-9184.j.aivencloud.com:24945/defaultdb?sslMode=REQUIRED
+      - key: SPRING_DATASOURCE_USERNAME
+        value: avnadmin
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
